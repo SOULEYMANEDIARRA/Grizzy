@@ -26,7 +26,7 @@ const Carousel: React.FC<CarouselProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(autoPlay)
   const [direction, setDirection] = useState(0)
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Gestion de l'auto-play
   useEffect(() => {
@@ -145,10 +145,10 @@ const Carousel: React.FC<CarouselProps> = ({
               className={`w-full h-full object-cover ${imageClassName}`}
               loading="lazy"
             />
-            
+
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-            
+
             {/* Caption */}
             {items[currentIndex].caption && (
               <motion.div
@@ -177,7 +177,7 @@ const Carousel: React.FC<CarouselProps> = ({
           >
             <ChevronLeft className="w-6 h-6" />
           </motion.button>
-          
+
           <motion.button
             className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300"
             onClick={goToNext}
@@ -211,11 +211,10 @@ const Carousel: React.FC<CarouselProps> = ({
           {items.map((_, index) => (
             <motion.button
               key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
                   ? 'bg-white scale-110'
                   : 'bg-white/50 hover:bg-white/80'
-              }`}
+                }`}
               onClick={() => goToSlide(index)}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}

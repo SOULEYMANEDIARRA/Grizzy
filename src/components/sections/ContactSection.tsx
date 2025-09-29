@@ -8,7 +8,6 @@ import {
   Facebook, 
   MessageCircle,
   Navigation,
-  Mail,
   Star
 } from 'lucide-react'
 import { RESTAURANT_INFO, ANALYTICS_EVENTS } from '@utils/constants'
@@ -21,7 +20,7 @@ const ContactSection: React.FC = () => {
   // Gérer les clics sur les liens de contact
   const handleContactClick = (type: string, value: string) => {
     if (typeof gtag !== 'undefined') {
-      gtag('event', ANALYTICS_EVENTS.PHONE_CLICK, {
+      window.gtag('event', ANALYTICS_EVENTS.PHONE_CLICK, {
         contact_type: type,
         contact_value: value
       })
@@ -31,7 +30,7 @@ const ContactSection: React.FC = () => {
   // Gérer les clics sur les réseaux sociaux
   const handleSocialClick = (platform: string, url: string) => {
     if (typeof gtag !== 'undefined') {
-      gtag('event', ANALYTICS_EVENTS.SOCIAL_CLICK, {
+      window.gtag('event', ANALYTICS_EVENTS.SOCIAL_CLICK, {
         social_platform: platform,
         social_url: url
       })

@@ -11,10 +11,17 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+
+    // ✅ Ajouts importants
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"],
+
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -22,7 +29,6 @@
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
       "@data/*": ["src/data/*"],
-      // "@types/*": ["src/types/*"]  // Removed to avoid conflict with TS built-in @types resolution,
       "@styles/*": ["src/styles/*"],
       "@hooks/*": ["src/hooks/*"]
     }
