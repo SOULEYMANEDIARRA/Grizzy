@@ -7,7 +7,7 @@ export const burgers: Burger[] = [
     name: 'GRILL\'Z Royal',
     description: 'Notre burger signature ! Double steak de bœuf grillé, fromage cheddar affiné, bacon croustillant, oignons caramélisés',
     price: 85,
-    image: 'https://images.unsplash.com/photo-1606756790138-8a53f9d6f3d1?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Pain brioche grillé',
@@ -49,7 +49,7 @@ export const burgers: Burger[] = [
     name: 'Fire Burger',
     description: 'Pour les amateurs de sensations ! Bœuf grillé épicé, jalapeños, sauce sriracha, fromage pepper jack',
     price: 70,
-    image: 'https://images.unsplash.com/photo-1601924638867-3ec6f64f5e4e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Pain brioche épicé',
@@ -69,7 +69,7 @@ export const burgers: Burger[] = [
     name: 'Gourmet Deluxe',
     description: 'L\'excellence à l\'état pur ! Bœuf wagyu grillé, fromage brie, champignons sautés et truffe',
     price: 110,
-    image: 'https://images.unsplash.com/photo-1632731528666-8c8f4f3a2a7b?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Pain brioche artisanal',
@@ -131,7 +131,7 @@ export const burgers: Burger[] = [
     name: 'Chicken Grill',
     description: 'Blanc de poulet grillé mariné, fromage suisse, avocat, tomates et sauce ranch',
     price: 60,
-    image: 'https://images.unsplash.com/photo-1617196035234-77e6d529fb63?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
     category: 'classic',
     ingredients: [
       'Pain brioche grillé',
@@ -172,7 +172,7 @@ export const burgers: Burger[] = [
     name: 'Mushroom Swiss',
     description: 'Classique américain ! Bœuf grillé, champignons sautés, fromage suisse et sauce à l\'ail',
     price: 65,
-    image: '/images/placeholder-burger.svg',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
     category: 'classic',
     ingredients: [
       'Pain brioche',
@@ -192,7 +192,7 @@ export const burgers: Burger[] = [
     name: 'Double Smash',
     description: 'Le roi des burgers ! Double steak smash, double fromage, sauce spéciale et oignons frits',
     price: 90,
-    image: '/images/placeholder-burger.svg',
+    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Pain brioche géant',
@@ -212,7 +212,7 @@ export const burgers: Burger[] = [
     name: 'Fish Burger',
     description: 'Filet de poisson pané croustillant, sauce tartare maison, salade et tomates fraîches',
     price: 55,
-    image: '/images/placeholder-burger.svg',
+    image: 'https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=800&q=80',
     category: 'classic',
     ingredients: [
       'Pain brioche',
@@ -232,7 +232,7 @@ export const burgers: Burger[] = [
     name: 'Spicy Chicken',
     description: 'Poulet crispy épicé, sauce buffalo, fromage blue cheese, céleri croquant',
     price: 65,
-    image: '/images/placeholder-burger.svg',
+    image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Pain brioche épicé',
@@ -253,7 +253,7 @@ export const burgers: Burger[] = [
     name: 'Menu GRILL\'Z Royal',
     description: 'GRILL\'Z Royal + Frites maison + Boisson au choix + Dessert',
     price: 110,
-    image: '/images/placeholder-burger.svg',
+    image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Burger GRILL\'Z Royal complet',
@@ -271,7 +271,7 @@ export const burgers: Burger[] = [
     name: 'Menu Double Trouble',
     description: 'Double Smash + Frites + Boisson + Onion Rings',
     price: 125,
-    image: '/images/placeholder-burger.svg',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
     category: 'signature',
     ingredients: [
       'Burger Double Smash',

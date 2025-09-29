@@ -187,7 +187,7 @@ const AboutSection: React.FC = () => {
           >
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-grillz-orange/20 to-grillz-yellow/20">
               <img
-                src="/images/gallery/team-group-portrait.jpg"
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
                 alt="Équipe GRILL'Z - Passionnés de cuisine fusion marocaine"
                 className="w-full h-full object-cover"
                 loading="lazy"
