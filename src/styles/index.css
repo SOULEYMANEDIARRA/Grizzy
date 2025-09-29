@@ -1,0 +1,181 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Variables CSS personnalisées pour cohérence */
+:root {
+  --grillz-black: #1a1a1a;
+  --grillz-grey: #4a4a4a;
+  --grillz-orange: #d97706;
+  --grillz-yellow: #f59e0b;
+  
+  --morocco-terracotta: #cd7f32;
+  --morocco-ochre: #cc7722;
+  --morocco-red: #8b0000;
+  --morocco-gold: #ffd700;
+  
+  --shadow-color: 0deg 0% 63%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34), 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36), 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34), 1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34);
+}
+
+/* Reset et base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Compensation header fixe */
+}
+
+body {
+  font-family: 'Roboto', system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--grillz-black);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes personnalisées */
+@layer components {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--grillz-orange), var(--grillz-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .text-gradient-morocco {
+    background: linear-gradient(135deg, var(--morocco-terracotta), var(--morocco-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .container-grillz {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .section-padding-sm {
+    @apply py-12 lg:py-16;
+  }
+
+  .btn-base {
+    @apply font-medium rounded-lg transition-all duration-300 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-grillz-orange text-white;
+    @apply hover:bg-grillz-yellow hover:shadow-glow;
+    @apply focus:ring-grillz-orange/50;
+  }
+
+  .btn-secondary {
+    @apply btn-base border-2 border-grillz-orange text-grillz-orange;
+    @apply hover:bg-grillz-orange hover:text-white hover:shadow-glow;
+    @apply focus:ring-grillz-orange/50;
+  }
+
+  .btn-whatsapp {
+    @apply btn-base bg-green-500 text-white;
+    @apply hover:bg-green-600 hover:shadow-lg;
+    @apply focus:ring-green-500/50;
+  }
+
+  .card-base {
+    @apply bg-white rounded-xl shadow-card;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:shadow-card-hover hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15);
+  }
+  
+  .moroccan-border {
+    position: relative;
+  }
+  
+  .moroccan-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, var(--morocco-terracotta), var(--morocco-gold)) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    border-radius: inherit;
+  }
+}
+
+/* Styles pour les animations au scroll */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Styles pour le loading */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Optimisations pour les performances */
+.gpu-acceleration {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Responsive utilities */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}

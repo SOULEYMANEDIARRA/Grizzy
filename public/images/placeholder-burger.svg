@@ -1,0 +1,29 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1f2937"/>
+  
+  <!-- Burger Icon -->
+  <g transform="translate(150, 75)">
+    <!-- Top Bun -->
+    <ellipse cx="50" cy="30" rx="45" ry="15" fill="#D2691E"/>
+    <ellipse cx="50" cy="25" rx="45" ry="15" fill="#F4A460"/>
+    
+    <!-- Lettuce -->
+    <rect x="10" y="35" width="80" height="8" rx="4" fill="#32CD32"/>
+    
+    <!-- Tomato -->
+    <rect x="15" y="43" width="70" height="6" rx="3" fill="#FF6347"/>
+    
+    <!-- Cheese -->
+    <rect x="5" y="49" width="90" height="8" rx="4" fill="#FFD700"/>
+    
+    <!-- Patty -->
+    <rect x="15" y="57" width="70" height="15" rx="7" fill="#8B4513"/>
+    
+    <!-- Bottom Bun -->
+    <ellipse cx="50" cy="82" rx="45" ry="15" fill="#D2691E"/>
+  </g>
+  
+  <!-- GRILL'Z Text -->
+  <text x="200" y="200" text-anchor="middle" fill="#FF4500" font-family="Arial, sans-serif" font-size="32" font-weight="bold">GRILL'Z</text>
+  <text x="200" y="230" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="16">Burger Placeholder</text>
+</svg>

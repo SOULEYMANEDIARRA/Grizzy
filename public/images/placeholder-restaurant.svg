@@ -1,0 +1,31 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#2d3748"/>
+  
+  <!-- Restaurant Interior -->
+  <g>
+    <!-- Tables -->
+    <rect x="50" y="200" width="100" height="60" rx="8" fill="#8B4513"/>
+    <rect x="200" y="200" width="100" height="60" rx="8" fill="#8B4513"/>
+    <rect x="350" y="200" width="100" height="60" rx="8" fill="#8B4513"/>
+    
+    <!-- Chairs -->
+    <rect x="60" y="180" width="20" height="40" rx="4" fill="#654321"/>
+    <rect x="120" y="180" width="20" height="40" rx="4" fill="#654321"/>
+    <rect x="210" y="180" width="20" height="40" rx="4" fill="#654321"/>
+    <rect x="270" y="180" width="20" height="40" rx="4" fill="#654321"/>
+    
+    <!-- Kitchen Counter -->
+    <rect x="50" y="100" width="500" height="40" rx="8" fill="#A0522D"/>
+    
+    <!-- Grill -->
+    <rect x="200" y="60" width="200" height="40" rx="8" fill="#2F4F4F"/>
+    
+    <!-- Flames -->
+    <path d="M220 80 Q225 70 230 80 Q235 65 240 80 Q245 70 250 80" stroke="#FF4500" stroke-width="3" fill="none"/>
+    <path d="M260 80 Q265 70 270 80 Q275 65 280 80 Q285 70 290 80" stroke="#FF4500" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- GRILL'Z Text -->
+  <text x="300" y="320" text-anchor="middle" fill="#FF4500" font-family="Arial, sans-serif" font-size="36" font-weight="bold">GRILL'Z</text>
+  <text x="300" y="350" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="18">Restaurant Interior</text>
+</svg>
