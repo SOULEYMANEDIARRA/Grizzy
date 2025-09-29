@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Flame } from 'lucide-react'
-import { NAVIGATION_ITEMS, RESTAURANT_INFO } from '@utils/constants'
+import { Menu, X } from 'lucide-react'
+import { NAVIGATION_ITEMS } from '@utils/constants'
 import Button from '@components/ui/Button'
 
 const Header: React.FC = () => {
@@ -57,17 +57,7 @@ const Header: React.FC = () => {
     }
   }
 
-  const flameVariants = {
-    initial: { rotate: 0 },
-    animate: { 
-      rotate: [0, 5, -5, 0],
-      transition: { 
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  }
+ 
 
   const menuVariants = {
     closed: {
