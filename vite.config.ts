@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -27,14 +27,27 @@ export default defineConfig({
       }
     },
     target: 'esnext',
-    minify: 'esbuild'
+    minify: 'esbuild',
+    sourcemap: true
   },
   server: {
     port: 3000,
     open: true,
-    host: true
+    host: true,
+    cors: true,
+    // Ajouter pour éviter les problèmes de redirection
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost'
+    }
   },
   preview: {
-    port: 3000
+    port: 3000,
+    host: true,
+    cors: true
+  },
+  // Important pour SPA
+  define: {
+    'process.env': {}
   }
 })
